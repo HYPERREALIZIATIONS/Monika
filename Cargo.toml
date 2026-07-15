@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["crates/core"]
+# src-tauri is a separate Cargo package (not part of this workspace) so that
+# building/testing the core does not pull Tauri's system-library-dependent tree.
+# It references crates/core via a relative path.
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0"
+repository = "https://example.com/monika"
+
+[profile.release]
+opt-level = 3
+lto = "thin"

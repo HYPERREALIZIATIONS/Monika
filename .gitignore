@@ -1,0 +1,22 @@
+# Rust build artifacts
+/target
+**/target
+
+# Node
+node_modules
+frontend/dist
+npm-debug.log*
+
+# Tauri generated
+src-tauri/gen
+src-tauri/target
+
+# Editor / OS
+.DS_Store
+.idea
+*.swp
+
+# App icons are generated; keep sources out of VCS if binary
+src-tauri/icons/*.png
+src-tauri/icons/*.ico
+src-tauri/icons/*.icns
